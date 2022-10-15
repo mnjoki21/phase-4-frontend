@@ -1,7 +1,12 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 function App() {
-  return <h1 className="text-4xl  underline">Hello world!</h1>;
+  return (
+    <div>
+      <NavBar />
+    </div>
+  )
 }
 
 export default App
