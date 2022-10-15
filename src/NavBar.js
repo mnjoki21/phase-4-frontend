@@ -45,7 +45,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/"
+              href="/subscriptions"
               title="Our product"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
@@ -54,7 +54,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/"
+              href="/providers"
               title="Product pricing"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
@@ -63,7 +63,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/"
+              href="/reminders"
               title="About us"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
@@ -72,7 +72,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/"
+              href="/signup"
               className=" bg-yellow inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
               title="Sign up"
             >
@@ -159,17 +159,8 @@ function NavBar() {
                     </li>
                     <li>
                       <a
-                        href="/"
+                        href="/subscriptions"
                         title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        PROVIDERS
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         SUBSCRIPTIONS
@@ -177,7 +168,16 @@ function NavBar() {
                     </li>
                     <li>
                       <a
-                        href="/"
+                        href="/providers"
+                        title="Product pricing"
+                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                      >
+                        PROVIDERS
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/reminders"
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
@@ -187,7 +187,7 @@ function NavBar() {
                     <li>
                       <a 
                       
-                        href="/"
+                        href="/signup"
                         className=" bg-yellow inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                         title="Sign up"
                       >

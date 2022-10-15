@@ -54,7 +54,12 @@ function SignUpForm( {onLogin} ) {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-          <form className="mb-0 space-y-6" action="#" method="POST">
+          <form
+            onSubmit={handleSubmit}
+            className="mb-0 space-y-6"
+            action="#"
+            method="POST"
+          >
             <div>
               <label
                 htmlFor="email"
@@ -70,6 +75,7 @@ function SignUpForm( {onLogin} ) {
                   autoComplete="email"
                   required
                   className=""
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -89,6 +95,26 @@ function SignUpForm( {onLogin} ) {
                   autoComplete="current-password"
                   required
                   className=""
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Password confirmation
+              </label>
+              <div className="mt-1">
+                <input
+                  id="password"
+                  name="passwordConfirmation"
+                  type="passwordConfirmation"
+                  autoComplete="current-password"
+                  required
+                  className=""
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
                 />
               </div>
             </div>
