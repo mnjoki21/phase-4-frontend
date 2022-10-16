@@ -29,6 +29,7 @@ function SignUpForm( {onLogin} ) {
             if (r.ok) {
               r.json().then((user) => onLogin(user));  
               navigate('/')
+              alert("Sign up is successful")
             } else {
                 r.json() .then((err) => setErrors(err.errors))
             }

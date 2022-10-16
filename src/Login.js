@@ -24,7 +24,8 @@ function Login({onLogin}) {
         }).then((r) => {
             if (r.ok) {
                 r.json().then((user) => onLogin(user))
-                navigate('/')
+              navigate('/')
+              alert('Login is successful')
                 
             } else {
                 r.json() .then((err) => setErrors(err.errors))
