@@ -37,7 +37,7 @@ As a user of the application,you will be able to :
 ### Installation Process
 
  ****  
-* Clone to the repo : git clone https://github.com/mnjoki1/reminders-react-frontend
+* Clone to the repo : git clone https://github.com/mnjoki21/phase-4-frontend
 
 * Unzip the downloaded files in a folder of choice.
 
