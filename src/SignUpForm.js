@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 function SignUpForm( {onLogin} ) {
@@ -6,7 +7,9 @@ function SignUpForm( {onLogin} ) {
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
     const [ passwordConfirmation, setPasswordConfirmation ] = useState('')
-    const [ errors, setErrors ] = useState([])
+  const [ errors, setErrors ] = useState([])
+  
+  const navigate = useNavigate()
 
     const url = 'http://localhost:3000/signup'
     
@@ -24,7 +27,8 @@ function SignUpForm( {onLogin} ) {
             }),
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => onLogin(user));  
+              r.json().then((user) => onLogin(user));  
+              navigate('/')
             } else {
                 r.json() .then((err) => setErrors(err.errors))
             }
@@ -44,7 +48,7 @@ function SignUpForm( {onLogin} ) {
         <p className="mt-2 text-center text-sm text-gray-600 max-w">
           Already registered?
           <a
-            href="#"
+            href="/login"
             className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             Sign in
@@ -69,7 +73,7 @@ function SignUpForm( {onLogin} ) {
               </label>
               <div className="mt-1">
                 <input
-                  id="email"
+                  // id="email"
                   name="email"
                   type="email"
                   autoComplete="email"
@@ -89,7 +93,7 @@ function SignUpForm( {onLogin} ) {
               </label>
               <div className="mt-1">
                 <input
-                  id="password"
+                  // id="password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
@@ -108,7 +112,7 @@ function SignUpForm( {onLogin} ) {
               </label>
               <div className="mt-1">
                 <input
-                  id="password"
+                  // id="password"
                   name="passwordConfirmation"
                   type="passwordConfirmation"
                   autoComplete="current-password"

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import NavBar from './NavBar'
 import Home from './Home'
 import SignUpForm from './SignUpForm'
+import Login from './Login'
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<SignUpForm />} />
-          {/* <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/" element={<Home />} /> */}
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </Router>
 
