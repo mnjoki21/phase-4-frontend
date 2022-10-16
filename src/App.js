@@ -4,6 +4,7 @@ import NavBar from './NavBar'
 import Home from './Home'
 import SignUpForm from './SignUpForm'
 import Login from './Login'
+import Subscriptions from './Subscriptions'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/signup" element={<SignUpForm />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/subscriptions" element={<Subscriptions />} />
           <Route exact path="/" element={<Home />} />
         </Routes>
       </Router>
