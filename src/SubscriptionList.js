@@ -5,7 +5,8 @@ function SubscriptionList() {
     
     const [ list, setList ] = useState([])
 
-    const url = 'http://localhost:3000/subscriptions'
+    const url =
+      "https://dashboard.heroku.com/apps/safe-mesa-15420/subscriptions";
 
     useEffect(() => {
         fetch(url)
@@ -17,15 +18,19 @@ function SubscriptionList() {
     }, [])
 
     function deleteList(id) {
-        fetch(`http://localhost:3000/subscriptions/${id}`, {
-            method: "DELETE"
-        })
-            .then((r) => r.json())
-            .then(() => {
-                const goThru = list.filter((subscription) => subscription.id !== id)
-                setList(goThru)
-
-            })
+        fetch(
+          `https://dashboard.heroku.com/apps/safe-mesa-15420/subscriptions/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((r) => r.json())
+          .then(() => {
+            const goThru = list.filter(
+              (subscription) => subscription.id !== id
+            );
+            setList(goThru);
+          });
     }
 
     return (

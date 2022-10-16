@@ -11,7 +11,7 @@ function SignUpForm( {onLogin} ) {
   
   const navigate = useNavigate()
 
-    const url = 'http://localhost:3000/signup'
+    const url = "https://dashboard.heroku.com/apps/safe-mesa-15420/signup";
     
     function handleSubmit(e) {
         e.preventDefault()

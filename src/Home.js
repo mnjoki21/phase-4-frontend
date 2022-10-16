@@ -18,22 +18,20 @@ function Home() {
             <div className="bg-white  border-l-4 shadow-sm border-deep-purple-accent-400">
               <div className="h-full p-5  border border-l-0 rounded-r">
                 <h6 className="mb-2  text-navy font-semibold leading-5">
-                  I'll be sure to note that in my log
+                  Reminder
                 </h6>
                 <p className="text-sm text-gray-900">
-                  Lookout flogging bilge rat main sheet bilge water nipper fluke
-                  to go on account heave down.
+                 This app will help you keep track of your subscriptions
                 </p>
               </div>
             </div>
             <div className="bg-white border-l-4 shadow-sm border-deep-purple-accent-400">
               <div className="h-full p-5 border border-l-0 rounded-r">
                 <h6 className="mb-2 text-navy font-semibold leading-5">
-                  A business big enough that it could be listed
+                  Enough reminders to prevent forgetfullness
                 </h6>
                 <p className="text-sm text-gray-900">
-                  Those options are already baked in with this model shoot me an
-                  email clear.
+                  Our service providers will help ensure you're on track with your subscriptions
                 </p>
               </div>
             </div>

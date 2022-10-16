@@ -8,7 +8,8 @@ function Subscriptions() {
         start_date: '',
         billing_cycle: ''
     })
-    const url = "http://localhost:3000/subscriptions"
+    const url =
+      "https://dashboard.heroku.com/apps/safe-mesa-15420/subscriptions";
 
     function handleSubmit(e) {
         e.preventDefault();

@@ -7,7 +7,7 @@ function Reminders() {
     subscription: ''
   })
 
-  const url = "http://localhost:3000/reminders"
+  const url = "https://dashboard.heroku.com/apps/safe-mesa-15420/reminders";
 
   function handleSubmit(e) {
     e.preventDefault();

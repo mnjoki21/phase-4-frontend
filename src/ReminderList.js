@@ -5,7 +5,7 @@ function ReminderList() {
     
     const [ list, setList ] = useState([])
 
-    const url = 'http://localhost:3000/reminders'
+    const url = "https://dashboard.heroku.com/apps/safe-mesa-15420/reminders";
 
 
     useEffect(() => {
@@ -19,17 +19,19 @@ function ReminderList() {
     },[])
 
     function deleteList(id) {
-        fetch(`http://localhost:3000/reminders/${id}`, {
-            method: "DELETE"
-        })
-            .then((r) => r.json())
-            .then(() => {
-                const goThru = list.filter((reminder) => reminder.id !== id)
-                setList(goThru)
-
-        })
+        fetch(
+          `https://dashboard.heroku.com/apps/safe-mesa-15420/reminders/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((r) => r.json())
+          .then(() => {
+            const goThru = list.filter((reminder) => reminder.id !== id);
+            setList(goThru);
+          });
     }
-    
+
     return (
       <>
         <table class="table-auto">
