@@ -2,18 +2,11 @@ import React from 'react'
 import {useState, useEffect } from "react"
 
 function SubscriptionList() {
+    
     const [ list, setList ] = useState([])
 
     const url = 'http://localhost:3000/subscriptions'
 
-    // const getData = () => {
-    //     fetch(url)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             console.log(data);
-    //             setList(data)
-    //         });
-    // };
     useEffect(() => {
         fetch(url)
             .then((res) => res.json())
@@ -21,8 +14,6 @@ function SubscriptionList() {
                 console.log(data);
                 setList(data);
             });
-        // <SubscriptionList />
-        // getData()
     }, [])
 
     function deleteList(id) {
@@ -36,12 +27,6 @@ function SubscriptionList() {
 
             })
     }
-
-    // <SubscriptionList />
-
-
-    
-
 
     return (
       
