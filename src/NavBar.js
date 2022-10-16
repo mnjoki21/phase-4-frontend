@@ -14,21 +14,6 @@ function NavBar() {
           title="remind me"
           className="inline-flex items-center"
         >
-          {/* <svg
-            className="w-8 text-deep-purple-accent-400"
-            viewBox="0 0 24 24"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            stroke="currentColor"
-            fill="none"
-          >
-            <rect x="3" y="1" width="7" height="12" />
-            <rect x="3" y="17" width="7" height="6" />
-            <rect x="14" y="1" width="7" height="6" />
-            <rect x="14" y="11" width="7" height="12" />
-          </svg> */}
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             <HiBellAlert /> REMINDME
           </span>
@@ -37,7 +22,7 @@ function NavBar() {
           <li>
             <a
               href="/"
-              title="Our product"
+              title="Home"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               HOME
@@ -46,7 +31,7 @@ function NavBar() {
           <li>
             <a
               href="/subscriptions"
-              title="Our product"
+              title="Subscriptions"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               SUBSCRIPTIONS
@@ -55,7 +40,7 @@ function NavBar() {
           <li>
             <a
               href="/providers"
-              title="Product pricing"
+              title="Providers"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               PROVIDERS
@@ -64,7 +49,7 @@ function NavBar() {
           <li>
             <a
               href="/reminders"
-              title="About us"
+              title="reminders"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               REMINDERS

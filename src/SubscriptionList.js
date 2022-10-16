@@ -48,7 +48,8 @@ function SubscriptionList() {
                 <tbody>
                     {list.map((l) => {
                             return (
-                                <><tr key={ list.id }>
+                                <>
+                                    <tr key={ list.id }>
                                     <td>{ l.name }</td>
                                     <td>{ l.amount }</td>
                                     <td>{ l.start_date }</td>
