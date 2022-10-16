@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SubscriptionList from './SubscriptionList';
 
 function Subscriptions() {
     const [ formData, setFormData ] = useState({
@@ -35,7 +36,8 @@ function Subscriptions() {
     }
 
 
-    return (
+  return (
+      <div>
       <section className="max-w-4xl p-6  mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h2 className="text-lg font-semibold text-gray-700 capitalize dark:text-white">
           Add subscription here
@@ -113,6 +115,11 @@ function Subscriptions() {
           </div>
         </form>
       </section>
+      <div>
+        <SubscriptionList />
+      </div>
+      </div>
+    
     );
 }
 

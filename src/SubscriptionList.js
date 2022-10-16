@@ -6,18 +6,24 @@ function SubscriptionList() {
 
     const url = 'http://localhost:3000/subscriptions'
 
-    const getData = () => {
+    // const getData = () => {
+    //     fetch(url)
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             console.log(data);
+    //             setList(data)
+    //         });
+    // };
+    useEffect(() => {
         fetch(url)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                setList(data)
+                setList(data);
             });
-    };
-    useEffect(() => {
-        <SubscriptionList />
-        getData()
-    },[])
+        // <SubscriptionList />
+        // getData()
+    }, [])
 
     function deleteList(id) {
         fetch(`http://localhost:3000/subscriptions/${id}`, {
@@ -28,10 +34,10 @@ function SubscriptionList() {
                 const goThru = list.filter((subscription) => subscription.id !== id)
                 setList(goThru)
 
-        })
+            })
     }
 
-    <SubscriptionList />
+    // <SubscriptionList />
 
 
     
@@ -40,38 +46,40 @@ function SubscriptionList() {
     return (
       
         <>
-    <table class="table-auto">
-      <thead>
-        <tr>
-          <th>Provider</th>
-          <th>Amount</th>
-          <th>Start Date</th>
-          <th>Billing cycle</th>
-        </tr>
-      </thead>
-      <tbody>
-        {list &&
-          list.map((l) => (
-            <><tr key={ list.id }>
-                  <td>{ l.name }</td>
-                  <td>{ l.amount }</td>
-                  <td>{ l.start_date }</td>
-                  <td>{ l.billing_cycle }</td>
-              </tr>
-                  <button type="button"
-                      onClick={ () => {
-                          deleteList(list.id)
-                      }}
-                      className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">Delete Subscription</button>
+            <table class="table-auto">
+                <thead>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Amount</th>
+                        <th>Start Date</th>
+                        <th>Billing cycle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {list.map((l) => {
+                            return (
+                                <><tr key={ list.id }>
+                                    <td>{ l.name }</td>
+                                    <td>{ l.amount }</td>
+                                    <td>{ l.start_date }</td>
+                                    <td>{ l.billing_cycle }</td>
+                                </tr>
+                                    <button type="button"
+                                        onClick={ () => {
+                                            deleteList(list.id)
+                                        } }
+                                        className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">Delete Subscription</button>
               
-              </>
-
-          ))}
-      </tbody>
+                                </>
+                            )
+                        }) }
+        
+                </tbody>
             </table>
             
-            </>
-  );
+        </>
+  
+    )
 }
 
 export default SubscriptionList

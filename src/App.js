@@ -7,6 +7,7 @@ import Login from './Login'
 import Subscriptions from './Subscriptions'
 import Providers from './Providers'
 import Reminders from './Reminders'
+import SubscriptionList from './SubscriptionList'
 
 function App() {
   return (
